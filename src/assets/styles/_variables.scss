@@ -1,0 +1,157 @@
+// Base
+$base:          16px;
+
+// Colors
+$white:         #ffffff;
+$gray:          #D6D6D6;
+$black:         #000000;
+
+$light-text:    #858585;
+$dark-text:     #424242;
+
+$light-blue:    #155BCC;
+$dark-blue:     #164FAC;
+
+$accent:        #2FDA7F;
+$background:    #FAFAFA;
+$search:        #F5F5F5;
+
+// Breakpoints
+$breakpoint-desktop:   			    			1264px;
+$breakpoint-tablet:       					  960px;
+$breakpoint-mobile:       						700px;
+
+$large-desktop:                       "(min-width: #{$breakpoint-desktop + 1})";
+$desktop:                             "(min-width: #{$breakpoint-tablet + 1}) and (max-width: #{$breakpoint-desktop})";
+$tablet:                              "(min-width: #{$breakpoint-mobile + 1}) and (max-width: #{$breakpoint-tablet})";
+$mobile:                              "(max-width: #{$breakpoint-mobile})";
+
+$min-large-desktop:                   $large-desktop;
+$min-desktop:                         "(min-width: #{$breakpoint-desktop + 1})";
+$min-tablet:                          "(min-width: #{$breakpoint-mobile + 1})";
+
+$col-padding-mobile:                  3px;
+$col-padding-desktop:                 $base;
+
+// Layout
+$layout-sidebar-width-tablet:         220px;
+$layout-sidebar-width-desktop:        280px;
+$layout-content-margin-tablet:        $col-padding-desktop;
+$layout-content-margin-desktop:       $col-padding-desktop * 3;
+$layout-content-width-tablet:         calc(100% - #{$layout-sidebar-width-tablet + $layout-content-margin-tablet});
+$layout-content-width-desktop:        calc(100% - #{$layout-sidebar-width-desktop + $layout-content-margin-desktop});
+
+// Fonts
+$main-font:    'Roboto';
+$second-font:  'Lato';
+$main-weight:   300;
+$main-size:     $base;
+
+// Button
+$button-bg-color-default:             $gray;
+$button-bg-color-default-hover:       darken($gray, 5%);
+$button-bg-color-default-active:      darken($gray, 15%);
+$button-bg-color-info:                $light-blue;
+$button-bg-color-info-hover:          darken($light-blue, 5%);
+$button-bg-color-info-active:         darken($light-blue, 15%);
+$button-bg-color-success:             $accent;
+$button-bg-color-success-hover:       darken($accent, 5%);
+$button-bg-color-success-active:      darken($accent, 15%);
+
+$button-text-color:                   $white;
+$button-text-color-second:            $dark-text;
+
+$button-font-weight:                  400;
+
+$button-text-size-small:              .65rem;
+$button-text-size-medium:             1rem;
+$button-text-size-large:              1.4rem;
+
+$button-padding-small:                .4rem .8rem;
+$button-padding-medium:               .6rem 1rem;
+$button-padding-desktop:              .8rem 1.2rem;
+$button-min-width:                    2rem;
+
+// Navigation
+$navigation-bg-color:                 $background;
+$navigation-border-color:             $gray;
+$navigation-height-mobile:            3rem;
+$navigation-height-desktop:           5rem;
+
+$navigation-item-padding-mobile:      1.25rem;
+$navigation-item-padding-desktop:     2rem;
+
+$navigation-item-text-color:          $dark-text;
+$navigation-item-text-color-hover:    $white;
+$navigation-item-text-color-active:   $white;
+$navigation-item-text-size:           1rem;
+$navigation-item-text-weight:         400;
+$navigation-item-bg-color-hover:      darken($light-blue, 5%);
+$navigation-item-bg-color-active:     darken($light-blue, 15%);
+
+$navigation-btn-bg-color:             $search;
+
+// Page
+$page-padding-mobile:                 2rem 1rem 1rem 1rem;
+$page-padding-tablet:                 2rem;
+$page-padding-desktop:                4rem;
+
+$page-header-margin:                  2rem;
+$page-icon-margin:                    2.4rem;
+
+$page-text-size-mobile:               1.2rem;
+$page-text-size-desktop:              1.6rem;
+
+// Card
+$card-bg-color:                       $white;
+$card-border-color:                   $gray;
+
+$card-cover-bg-color:                 $background;
+
+$card-margin-bottom-mobile:           $col-padding-mobile * 4;
+$card-margin-bottom-desktop:          $col-padding-desktop * 2;
+
+$card-content-padding-mobile:         .5rem;
+$card-content-padding-desktop:        1rem;
+$card-content-padding-large-desktop:  2rem;
+
+$card-title-text-size-mobile:         1rem;
+$card-title-text-size-desktop:        1.2rem;
+$card-title-text-size-large-desktop:  1.4rem;
+$card-title-text-weight:              400;
+$card-title-text-color:               $dark-text;
+$card-title-margin-desktop:           0 0 3px 0;
+
+$card-desc-text-size:                .8rem;
+$card-desc-text-size-large-desktop:  1rem;
+$card-desc-text-weight:              300;
+$card-desc-text-color:               $light-text;
+
+// shipping-cart
+$shipping-cart-bg-color:             $light-blue;
+$shipping-cart-text-size:            .8rem;
+$shipping-cart-text-color:           $white;
+
+$shipping-cart-padding:              1.5rem;
+$shipping-cart-margin:               0 0 1rem 0;
+
+$shipping-cart-basket-color:         $dark-blue;
+
+$shipping-cart-basket-space:         10px;
+
+$shipping-cart-quantity-text-weight:       500;
+$shipping-cart-quantity-color:             $accent;
+
+$shipping-cart-title-text-size:            1rem;
+$shipping-cart-title-text-weight:          400;
+$shipping-cart-title-text-color:           $white;
+$shipping-cart-title-margin:               0 0 1rem 0;
+
+$shipping-cart-desc-text-size:             .75rem;
+$shipping-cart-desc-text-weight:           300;
+$shipping-cart-desc-text-color:            rgba($white, .75);
+$shipping-cart-desc-margin:                0 0 2rem 0;
+
+$shipping-order-min-height:                162px;
+$shipping-order-max-height:                300px;
+$shipping-order-border:                    1px dashed $white;

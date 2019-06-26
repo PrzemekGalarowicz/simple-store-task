@@ -1,4 +1,5 @@
-# recruitment-task
+# Simple store task
+## This is a simple store project. Please notice, that some of the libraries, that I've used may not be necessary. But I've wanted to show, that I know how to use as many tools as I could.
 
 ## Project setup
 ```

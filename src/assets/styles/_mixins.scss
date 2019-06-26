@@ -1,0 +1,142 @@
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+
+@mixin clearfix {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    content: '';
+    display: table
+  }
+
+  &:after {
+    clear: both
+  }
+}
+
+@mixin truncute {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin multiline-truncute ($height) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: $height;
+  height: $height * 2;
+}
+
+@mixin screen($size) {
+  @if $size == large-desktop {
+    @media #{$large-desktop} {
+      @content;
+    }
+  }
+
+  @if $size == min-desktop {
+    @media #{$min-desktop} {
+      @content;
+    }
+  }
+
+  @if $size == desktop {
+    @media #{$desktop} {
+      @content;
+    }
+  }
+
+  @else if $size == min-tablet {
+    @media #{$min-tablet} {
+      @content;
+    }
+  }
+
+  @else if $size == tablet {
+    @media #{$tablet} {
+      @content;
+    }
+  }
+
+  @else if $size == mobile {
+    @media #{$mobile} {
+      @content;
+    }
+  }
+
+  @else {
+    @media (min-width: #{$size}) {
+      @content;
+    }
+  }
+}
+
+@mixin col($size, $num) {
+  &--#{$size}-#{$num} {
+    width: calc(#{$num}/12 * 100%)
+  }
+
+  &--offset-#{$size}-#{$num} {
+    margin-left: calc(#{$num}/12 * 100%)
+  }
+
+  &--clear-offset-#{$size} {
+    margin-left: 0
+  }
+}
+
+@mixin button($background, $background-hover, $background-active, $text-color) {
+  background-color: $background;
+  border: 0;
+  color: $text-color;
+  cursor: pointer;
+  transition: background-color 300ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: $background-hover
+  }
+
+  &:active {
+    background-color: $background-active
+  }
+
+  &[disabled] {
+    background-color: $background !important;
+    color: $text-color !important;
+    opacity: .5;
+    cursor: not-allowed;
+  }
+}
+
+@mixin navigation-item {
+  font-size: $navigation-item-text-size;
+  font-weight: $navigation-item-text-weight;
+  color: $navigation-item-text-color;
+  padding-right: $navigation-item-padding-mobile;
+  padding-left: $navigation-item-padding-mobile;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 300ms linear;
+
+  &--exact-active,
+  &:hover {
+    background-color: $navigation-item-bg-color-hover;
+    color: $navigation-item-text-color-hover;
+  }
+
+  @include screen(min-tablet) {
+    display: inline-flex;
+    padding-right: $navigation-item-padding-desktop;
+    padding-left: $navigation-item-padding-desktop;
+  }
+}

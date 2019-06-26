@@ -1,0 +1,62 @@
+body {
+    background-color: $background;
+    font-family: $main-font;
+    font-weight: $main-weight;
+    font-size: $main-size;
+    color: $light-text;
+    line-height: 1.6;
+    padding: $navigation-height-mobile * 1.2 0 $navigation-height-mobile 0;
+
+    @include screen(min-tablet) {
+        padding: $navigation-height-desktop * 1.2 0 $navigation-height-desktop * .2 0;
+    }
+
+    @include screen(min-desktop) {
+        padding: $navigation-height-desktop * 2 0 $navigation-height-desktop 0;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $dark-text;
+    line-height: 1.2;
+}
+
+p {
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+
+a {
+    color: $light-blue;
+
+    &:hover {
+        color: $dark-blue;
+    }
+}
+
+.hide {
+
+    &--mobile {
+        @include screen(mobile) {
+            display: none !important;
+        }
+    }
+
+    &--tablet {
+        @include screen(tablet) {
+            display: none !important;
+        }
+    }
+
+    &--desktop {
+        @include screen(desktop) {
+            display: none !important;
+        }
+    }
+
+    &--large-desktop {
+        @include screen(large-desktop) {
+            display: none !important;
+        }
+    }
+}
