@@ -1,5 +1,6 @@
-# Simple store task
-This is a simple store project. Please notice, that some of the libraries, that I've used may not be necessary. But I've wanted to show, that I know how to use as many tools as I could.
+# Simple Store Task
+
+This is a simple store project. Please notice that some of the libraries I've used may not be necessary. But I wanted to show that I knew how to use as many tools as possible.
 
 ## Project setup
 ```
